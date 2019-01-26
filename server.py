@@ -89,11 +89,6 @@ def getContentType(file):
         return ''
 
 def create_response(code, payload, contentType):
-    #now = datetime.now()
-    #stamp = mktime(now.timetuple())
-    #httpDate = format_date_time(stamp)
-    #httpServer = "Python/6.6.6 (custom)"
-    #response = "HTTP/1.1 {}\r\nDate: {}\r\nServer: {}\r\nContent_Type: {}\r\n\r\n{}".format(code, httpDate, httpServer, contentType, payload)
     simpleResponse = "HTTP/1.1 {}\r\nContent-type: {}\r\n\r\n{}".format(code, contentType, payload)
     return simpleResponse
 
